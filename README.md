@@ -1,4 +1,4 @@
-# TODO APP
+# Todo app
 
 Application developed for explore the resources of redisJson and redisCache using fastapi
 
