@@ -7,6 +7,8 @@ __pycache__/
 resume.txt
 checklist.md
 
+.env
+
 # C extensions
 *.so
 
