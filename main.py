@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from src.config.env import *
 from src.services import *
 
+from src.models.Task import Task
+
 app = FastAPI()
 app.title = "Redis App"
 app.description = "Create a simple todo using regis and fastapi"
@@ -25,3 +27,8 @@ async def say_hello():
 @app.get("/tasks")
 async def get_tasks():
     return get_tasks_service()
+
+
+@app.post("/tasks")
+async def create(task: Task):
+    return task.save()
